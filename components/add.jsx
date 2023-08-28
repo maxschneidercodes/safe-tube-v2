@@ -23,7 +23,7 @@ export default function Add(props) {
             toast.success(`Channel ${channel} Erfolgreich Hinzugefügt`)
             setSpinner(false)
         } else {
-            fetch("/api/yt", {
+            fetch(process.env.NEXT_PUBLIC_URL ? process.env.NEXT_PUBLIC_URL : "http://localhost:3000" + "/api/yt", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
