@@ -11,7 +11,7 @@ export default function DashboardPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data, error, isLoading, mutate } = useSWR(
-    process.env.URL ? "" : "http://localhost:3000" + "/api/yt",
+    process.env.NEXT_PUBLIC_URL + "/api/yt",
     fetcher
   );
 
