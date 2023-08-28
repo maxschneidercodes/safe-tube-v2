@@ -24,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.jsx",".next/types/**/*.ts", "src/pages/_app.js", "components/add.sx", "src/pages/api/yt.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.jsx",".next/types/**/*.ts", "src/pages/_app.js", "components/add.sx", "src/pages/api/yt.ts", "src/pages/feed/index.js"],
   "exclude": ["node_modules"]
 }

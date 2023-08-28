@@ -49,7 +49,7 @@ export default function DashboardPage() {
               <div className="row ">
                 <div className="col"></div>
                 <div class="col-md-6">
-                  <Add mutate={mutate} />
+                  <Add welcome={false} />
                 </div>
                 <div className="col"></div>
               </div>
@@ -64,7 +64,7 @@ export default function DashboardPage() {
                     </h1>
                     <Settings />
                   </div>
-                  <Add />
+                  <Add welcome={false} />
                 </div>
                 <div className="mt-4 mb-10 flex flex-wrap">
                   <Script
