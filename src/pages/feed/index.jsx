@@ -10,8 +10,7 @@ import Script from "next/script";
 export default function DashboardPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
-  const { data, error, isLoading, mutate } = useSWR(
-    process.env.NEXT_PUBLIC_PRODUCTION ? "https://www.safetube.eu" : "http://localhost:3000" + "/api/yt",
+  const { data, error, isLoading, mutate } = useSWR("https://www.safetube.eu" + "/api/yt",
     fetcher
   );
 
