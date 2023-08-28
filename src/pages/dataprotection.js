@@ -1,5 +1,3 @@
-import LayoutWrapper from "../../component/LayoutWrapper";
-
 export default function DataProtectionPage() {
   return (
     <>
