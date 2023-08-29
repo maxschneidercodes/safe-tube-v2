@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="mb-4 sm:mb-0">
               <div className="">
                 <Link className="block" href="https://maxschneidercodes.de" aria-label="Cruip">
-                  <Image src="../images/logo2.png" width={300} height={150} priority alt="Stellar" />
+                  <Image src="/images/logo2.png" width={300} height={150} priority alt="Stellar" />
                 </Link>
               </div>
 

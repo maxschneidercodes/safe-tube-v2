@@ -54,7 +54,7 @@ export default function Add(props) {
     }
 
     return <form onSubmit={handleAdd}>
-        <div class="mt-8 text-sm flex p-4 rounded bg-gray-900" >
+        <div class="text-sm flex rounded bg-gray-800" >
             {getSpinner && <Spinner />}
             <input
                 type="name"

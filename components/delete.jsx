@@ -27,26 +27,25 @@ export default function Delete(props) {
     function createChannelIDsHtml(channelIDs) {
         if (channelIDs) {
             return channelIDs.map((item) => {
-                return <button onClick={() => {
-                    removeChannelClicked(item.id)
-                }} type="button" class="m-1 text-white btn-sm bg-red-500" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    {item.title}
-                    <svg onClick={() => {
-                        removeChannelClicked(item.id)
-                    }} class="ml-2 text-dark w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                    </svg>
-                </button>
+                return <option value={item.id}>{item.title} Löschen</option>
             });
         }
     }
 
-    return (<div className="rounded bg-gray-900 p-8 shadow-lg p-2 mt-4" style={{ margin: "2rem auto", maxWidth: "650px" }}>
-        <p className="text-gray-400 text-lg mb-4 ">YouTube-Channel Löschen</p>
+    return (<div className="rounded bg-gray-600">
         <div className="flex flex-wrap">
-            {getHTML}
+            <select aria-label="Select"
+                onChange={(e) => {
+                    e.preventDefault()
+                    const selectedValue = e.target.value
+                    removeChannelClicked(selectedValue)
+                    router.reload()
+                }}
+                className="text-white d-inline text-sm flex  rounded bg-gray-600 "
+            >
+                <option selected>YouTube-Channel Löschen</option>
+                {getHTML}
+            </select>
         </div>
     </div >
     );

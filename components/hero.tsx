@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import Illustration from '@/public/images/hero-illustration.svg'
 import HeroImage from '@/public/images/img.png'
 import Add from './add'
 
@@ -17,7 +15,7 @@ export default function Hero() {
             <div className="md:w-[600px]">
 
               <h1 className="h2 text-white text-left mb-6" data-aos="fade-right" data-aos-delay="100">
-                YouTube {' '}
+                YouTube
                 <span className="relative inline-flex text-red-500 ">
                   <svg
                     className="absolute left-0 top-full -mt-4 max-w-full z-10"
