@@ -6,7 +6,7 @@ export default function VideoDetail() {
   const { videoID } = router.query;
 
   return (
-    <div className="bg-light pt-4 pb-4">
+    <div className="bg-light p-8">
       <Head>
         <title> Viel Spaß beim Video! 😄 - SafeTube</title>
       </Head>

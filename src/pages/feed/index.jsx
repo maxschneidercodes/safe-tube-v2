@@ -6,11 +6,12 @@ import Settings from "../../../components/settings";
 import useSWR from "swr";
 import Delete from "../../../components/delete";
 import Script from "next/script";
+import getFetchURL from "../../../lib/fetchURL"
 
 export default function DashboardPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
-  const { data, error, isLoading, mutate } = useSWR("https://www.safetube.eu" + "/api/yt",
+  const { data, error, isLoading, mutate } = useSWR(getFetchURL() + "/api/yt",
     fetcher
   );
 
@@ -38,34 +39,32 @@ export default function DashboardPage() {
       <Head>
         <title>Dein YT-Video Feed - SafeTube</title>
       </Head>
-      <div className="bg-light">
-        <div className="container p-4">
+      <div className="container p-4 bg-gray-800 ">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div></div>
+
           {!data || !data.xmlArray.length > 0 ? (
-            <>
-              <p className="fs-3 text-center pt-5 text-muted">
+            <div className="h-auto max-w-full rounded-lg">
+              <p className="text-white text-sm text-center pt-5 text-muted ">
                 Noch keine YouTube-Channels Hinzugefügt 😐
               </p>
-              <div className="row ">
-                <div className="col"></div>
-                <div class="col-md-6">
-                  <Add welcome={false} />
-                </div>
-                <div className="col"></div>
-              </div>
-            </>
+              <Add welcome={false} />
+            </div>
           ) : (
             <>
               <div class="container mx-auto px-4 mt-4">
                 <div className="flex flex-wrap justify-between">
                   <div>
-                    <h1 className="h2">
-                      <span style={{ color: " #E95556" }}>SafeTube</span> Feed
+                    <h1 className="h2 text-white mb-4">
+                      Dein <span className="text-red-500">SafeTube</span> Feed
                     </h1>
+
                     <Settings />
                   </div>
+
                   <Add welcome={false} />
                 </div>
-                <div className="mt-4 mb-10 flex flex-wrap">
+                <div className="mt-10 rounded mb-10 flex flex-wrap">
                   <Script
                     id="Adsense-id"
                     data-ad-client="ca-pub-4969831557424363"
@@ -75,9 +74,9 @@ export default function DashboardPage() {
                   />
                   {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
                 </div>
-                <div className="flex">
-                  <Delete />
-                </div>
+
+                <Delete />
+
               </div>
             </>
           )}

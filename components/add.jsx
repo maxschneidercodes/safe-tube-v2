@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Spinner from "./spinner";
 import toast from "react-hot-toast";
+import getFetchURL from "@/lib/fetchURL";
 
 export default function Add(props) {
     const router = useRouter();
@@ -23,7 +24,8 @@ export default function Add(props) {
             toast.success(`Channel ${channel} Erfolgreich Hinzugefügt`)
             setSpinner(false)
         } else {
-            fetch("https://www.safetube.eu" + "/api/yt", {
+
+            fetch(getFetchURL() + "/api/yt", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -51,24 +53,22 @@ export default function Add(props) {
         }
     }
 
-    return <>
-
-        <form onSubmit={handleAdd}>
-            <div class="mt-8 text-sm flex p-4 shadow-2xl bg-gray-600 rounded" >
-                {getSpinner && <Spinner />}
-                <input
-                    type="name"
-                    {...register("channelInput")}
-                    placeholder="YT-Channel"
-                    className="rounded text-lg bg-gray-100 text-dark p-2"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    required
-                />
-                <button type="submit" className="ml-4 btn-sm text-white bg-blue-500">
-                    Hinzufügen
-                </button>
-            </div>
-        </form>
-    </>
+    return <form onSubmit={handleAdd}>
+        <div class="mt-8 text-sm flex p-6 w-full rounded bg-gray-900" >
+            {getSpinner && <Spinner />}
+            <input
+                type="name"
+                {...register("channelInput")}
+                placeholder="YouTube-Channel"
+                className="rounded text-lg bg-gray-200 text-dark p-2"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                required
+                style={{ width: "300px" }}
+            />
+            <button type="submit" className="ml-4 btn-sm text-white bg-red-500">
+                Hinzufügen
+            </button>
+        </div>
+    </form>
 }
