@@ -48,7 +48,7 @@ export default function DashboardPage() {
       <Head>
         <title>Dein SafeTube Feed </title>
       </Head>
-      <Header extraCSS="shadow-2xl " title="Feed" titleCSS="text-gray-600" >
+      <Header extraCSS="shadow-2xl " title="Dein Feed" titleCSS="text-white" >
         <li className="m-2 p-2">
           <Settings />
         </li>
@@ -61,26 +61,17 @@ export default function DashboardPage() {
       </Header>
       <div className="container p-4 px-8 bg-gray-800 ">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {!data || !data.xmlArray.length > 0 ? (
+          {!data || !data.xmlArray.length > 0 ?
             <div className="h-auto max-w-full rounded-lg">
               <p className="text-white text-sm text-center pt-5 text-muted ">
                 Noch keine YouTube-Channels Hinzugefügt 😐
               </p>
             </div>
-          ) : (
-            <>
-              <div className="flex flex-wrap mt-8 mb-12 rounded justify-items-center items-center ">
-                <Script
-                  id="Adsense-id"
-                  data-ad-client="ca-pub-4969831557424363"
-                  async="true"
-                  strategy="beforeInteractive"
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                />
-                {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
-              </div>
-            </>
-          )}
+            :
+            <div className="flex flex-wrap mt-8 mb-12 rounded justify-items-center items-center ">
+              {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
+            </div>
+          }
         </div>
       </div>
     </>

@@ -16,6 +16,14 @@ export default function Footer() {
 
               <ul className="text-xs ml-8 space-y-2 ">
                 <li>
+                  <form action="https://www.paypal.com/donate" method="post" target="_top">
+                    <input type="hidden" name="hosted_button_id" value="DVJ228DZDZJEA" />
+                    <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Spenden mit dem PayPal-Button" />
+                    <img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
+                  </form>
+
+                </li>
+                <li>
                   <a className="text-slate-500 hover:text-blue-500 transition duration-150 ease-in-out" href="/impressum">
                     Impressum
                   </a>

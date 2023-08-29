@@ -15,8 +15,7 @@ export default function Hero() {
             <div className="md:w-[600px]">
 
               <h1 className="h2 text-white text-left mb-6" data-aos="fade-right" data-aos-delay="100">
-                YouTube
-                <span className="relative inline-flex text-red-500 ">
+                YouTube <span className="relative inline-flex text-red-500 ">
                   <svg
                     className="absolute left-0 top-full -mt-4 max-w-full z-10"
                     width="220"
@@ -29,9 +28,7 @@ export default function Hero() {
                       fill="#fff"
                       fillRule="evenodd"
                     />
-                  </svg>
-                  sicher
-                </span> und ohne
+                  </svg> sicher </span> und ohne
                 <span className="relative inline-flex text-red-500">
                   <svg
                     className="absolute left-0 top-full -mt-4 max-w-full z-0"
@@ -49,9 +46,10 @@ export default function Hero() {
                   Ablenkung
                 </span> ansehen
               </h1>
-              <p className="text-sm text-left text-white  ml-4 mt-10 mb-4 " data-aos="fade-right" data-aos-delay="200"
-                style={{ width: "400px" }}>
-                Fügen Sie Ihre bevorzugten YouTube-Kanäle hinzu und sehen Sie sich die Videos ohne Ablenkungen oder unangemessene Inhalte an.
+
+              <p className="text-sm text-left text-white  ml-4 mt-10 mb-8 " data-aos="fade-right" data-aos-delay="200"
+                style={{ width: "450px" }}>
+                <strong>Einfach</strong> und <strong>Kostenlos</strong>. Fügen Sie Ihre bevorzugten YouTube-Kanäle hinzu und sehen Sie sich die Videos ohne Ablenkungen oder unangemessene Inhalte an.
               </p>
               <div
                 className="max-w-2xl sm:max-w-none sm:flex sm:justify-start md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-12 md:mb-0"
