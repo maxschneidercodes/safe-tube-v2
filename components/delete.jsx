@@ -44,7 +44,7 @@ export default function Delete(props) {
     }
 
     return (<div className="rounded bg-gray-900 p-8 shadow-lg p-2 mt-4" style={{ margin: "2rem auto", maxWidth: "650px" }}>
-        <p className="text-white text-lg mb-4 ">Channel Löschen</p>
+        <p className="text-gray-400 text-lg mb-4 ">YouTube-Channel Löschen</p>
         <div className="flex flex-wrap">
             {getHTML}
         </div>

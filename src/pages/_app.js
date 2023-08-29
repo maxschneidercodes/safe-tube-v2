@@ -23,7 +23,6 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Header />
       <NextNProgress
         color="#ef4544"
         startPosition={0.3}

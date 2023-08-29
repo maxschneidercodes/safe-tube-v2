@@ -4,19 +4,19 @@ export default function Document() {
   return (
     <Html lang="de">
       <Head>
-        <meta charset="utf-8" />
-        <link rel="shortcut icon" href="/favicon.png" />
+        <meta charSet="utf-8" />
+        <link rel="shortcut icon" href="/images/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
         <script
           type="text/javascript"
           src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
-          charset="UTF-8"
+          charSet="UTF-8"
         ></script>
         <script
           type="text/javascript"
-          charset="UTF-8"
+          charSet="UTF-8"
           dangerouslySetInnerHTML={{
             __html: `
 document.addEventListener('DOMContentLoaded', function () {

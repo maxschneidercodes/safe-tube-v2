@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-export default function Header() {
+export default function Header(props: any) {
   return (
-    <header className="relative bg-gray-800 w-full z-30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <header className={`relative bg-gray-800 w-full z-30 ` + props.extraCSS}>
+      <div className="max-w-8xl mx-auto px-4 sm:px-6">
         <div className="flex flex-wrap items-center justify-between h-16 md:h-20">
           <div id="headerLink" className="shrink-0 mr-4">
             <Link className="text-3xl text-gray-600 font-bold" href="/" aria-label="SafeTube.eu" >
