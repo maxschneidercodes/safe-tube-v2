@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header(props: any) {
 
-  const { title, titleCSS, extraCSS, buttonTitle } = props
+  const { title, titleCSS } = props
 
   return (
     <header className={`relative bg-gray-800 w-full z-30 ` + props.extraCSS}>

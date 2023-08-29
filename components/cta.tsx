@@ -5,12 +5,9 @@ export default function Cta() {
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-8">
-          {/* CTA box */}
           <div className="relative py-12 px-8 md:py-20 md:px-12">
-            {/* Dark box */}
             <div className="absolute inset-0 bg-gray-800 -rotate-2 -z-10" aria-hidden="true" />
             <div className="flex flex-col lg:flex-row justify-between items-center">
-              {/* CTA content */}
               <div className="relative mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
                 <svg className="absolute left-0 bottom-full mb-4" width="82" height="75" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -21,7 +18,6 @@ export default function Cta() {
                 </svg>
                 <h3 className="h2 font-cabinet-grotesk text-gray-100">Become a member of the best creative community</h3>
               </div>
-              {/* CTA button */}
               <div className="shrink-0">
                 <Link className="btn text-white bg-blue-500 hover:bg-blue-600 w-full shadow-sm" href="/signup">
                   Join The Community

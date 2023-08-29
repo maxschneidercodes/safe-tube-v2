@@ -5,7 +5,6 @@ import Head from "next/head";
 import Settings from "../../../components/settings";
 import useSWR from "swr";
 import Delete from "../../../components/delete";
-import Script from "next/script";
 import getFetchURL from "../../../lib/fetchURL"
 import Header from "@/components/ui/header";
 import Spinner from "@/components/spinner";
@@ -13,9 +12,7 @@ import Spinner from "@/components/spinner";
 export default function DashboardPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
-  const { data, error, isLoading, mutate } = useSWR(getFetchURL() + "/api/yt",
-    fetcher
-  );
+  const { data, error, isLoading } = useSWR(getFetchURL() + "/api/yt", fetcher);
 
   let videoHTMLData = [];
 
@@ -49,13 +46,13 @@ export default function DashboardPage() {
         <title>Dein SafeTube Feed </title>
       </Head>
       <Header extraCSS="shadow-2xl " title="Dein Feed" titleCSS="text-white" >
-        <li className="m-2 p-2">
+        <li className="mr-4 mt-4">
           <Settings />
         </li>
-        <li className="m-2 p-2">
+        <li className="mr-4 mt-4">
           <Delete />
         </li>
-        <li className="m-2 p-2">
+        <li className="mt-4">
           <Add welcome={false} />
         </li>
       </Header>
