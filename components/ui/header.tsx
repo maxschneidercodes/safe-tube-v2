@@ -6,7 +6,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-wrap items-center justify-between h-16 md:h-20">
           <div id="headerLink" className="shrink-0 mr-4">
-            <Link className="text-xl text-white font-bold" href="/" aria-label="SafeTube.eu" >
+            <Link className="text-3xl text-gray-600 font-bold" href="/" aria-label="SafeTube.eu" >
               SafeTube.eu
             </Link>
           </div>
