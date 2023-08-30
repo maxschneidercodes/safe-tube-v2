@@ -55,7 +55,9 @@ export default function Hero() {
           </div>
           <div className="max-w-sm mx-auto md:max-w-none md:absolute md:left-[600px] md:top-0 -mb-12 md:-mt-12 md:mb-0">
             <div className="relative -ml-3 -mr-24 md:mx-0">
-              <Image src={HeroImage} className="rounded md:max-w-none shadow-2xl shadow-red-600" width="1220" height="545" alt="Credit card" data-aos="fade-up" />
+              <Image src={HeroImage} unoptimized={true}
+                className="rounded md:max-w-none shadow-2xl shadow-slate-500"
+                width="1220" height="545" alt="Credit card" data-aos="fade-up" />
             </div>
           </div>
         </div>
