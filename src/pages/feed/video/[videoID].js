@@ -26,7 +26,10 @@ export default function VideoDetail() {
           <title> Viel Spaß beim Video! 😄 - SafeTube</title>
         </Head>
 
-        <div className="container mb-10 mt-10">
+        <div
+          className="container mb-4 mt-4"
+          style={{ width: "1250px", margin: "0 auto" }}
+        >
           <iframe
             className="w-full aspect-video"
             style={{ height: "620px" }}

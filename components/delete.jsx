@@ -41,7 +41,7 @@ export default function Delete(props) {
                     removeChannelClicked(selectedValue)
                     router.reload()
                 }}
-                className="text-white d-inline text-sm flex  rounded bg-slate-700 "
+                className="text-white d-inline text-sm flex  rounded bg-slate-600 "
             >
                 <option selected>YouTube-Channel Löschen</option>
                 {getHTML}

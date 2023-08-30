@@ -61,7 +61,7 @@ export default function DashboardPage() {
         <Delete />
         <Add welcome={false} />
       </Header>
-      <div className="container p-4 px-8 bg-slate-800 ">
+      <div className="container p-4 px-8 bg-slate-800 " style={{ overflowX: "hidden" }}>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {cookiesAccepted ? <>
             {!data || !data.xmlArray.length > 0 ?
@@ -85,7 +85,7 @@ export default function DashboardPage() {
               <h1 className="mb-4 text-xl text-white text-center pt-5 text-muted ">
                 Bitte akzeptieren Sie unsere Cookies, um SafeTube zu nutzen. 🍪
               </h1>
-              <a className="text-blue-500 mt-4 hover:text-blue-500 transition duration-150 ease-in-out" href="#" id="open_preferences_center">
+              <a className="text-white mt-4 hover:text-blue-500 transition duration-150 ease-in-out" href="#" id="open_preferences_center">
                 Cookie Einstellungen öffnen
               </a>
             </div>
