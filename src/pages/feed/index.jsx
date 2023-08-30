@@ -61,8 +61,8 @@ export default function DashboardPage() {
         <Delete />
         <Add welcome={false} />
       </Header>
-      <div className="container p-4 px-8 bg-slate-800 " style={{ overflowX: "hidden" }}>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="container bg-slate-800 " style={{ overflowX: "hidden" }}>
+        <div className="grid place-items-center" style={{ overflowX: "hidden" }}>
           {cookiesAccepted ? <>
             {!data || !data.xmlArray.length > 0 ?
               <div className="h-auto max-w-full rounded-lg mt-10 pt-10 pb-10 mb-10">
@@ -74,7 +74,7 @@ export default function DashboardPage() {
                 </div>
               </div> :
               <>
-                <div className="flex flex-wrap mt-8 mb-12 rounded justify-items-center items-center ">
+                <div className="flex flex-wrap items-center justify-center mt-4 mb-12 rounded ">
                   {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
                   <Donate />
                 </div>
