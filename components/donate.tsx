@@ -1,5 +1,5 @@
 export default function Donate() {
-    return <div className="shadow-2xl ml-4 mt-4 mb-4 p-4 p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-slate-800 dark:border-gray-700"
+    return <div className="z-10 shadow-2xl ml-4 mt-4 mb-4 p-4 p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-slate-800 dark:border-gray-700"
         style={{ maxWidth: "320px", height: "200px" }}
         data-aos="fade-up"
         data-aos-delay={`100`}>

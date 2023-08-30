@@ -8,7 +8,7 @@ export default function Header(props: any) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className={`relative bg-slate-600 w-full z-30 ` + props.extraCSS}>
+    <header className={`relative bg-slate-900 w-full z-30 ` + props.extraCSS}>
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link className={`text-3xl font-bold ${titleCSS}`} href="/" aria-label="SafeTube.eu" >
           {title}

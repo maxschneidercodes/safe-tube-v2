@@ -43,9 +43,8 @@ export default function Hero() {
                 Ablenkung
               </span> ansehen
             </h1>
-            <p className="text-md text-left text-white mt-10 mb-10 mr-10" data-aos="fade-right" data-aos-delay="200">
-              <strong>Einfach</strong> und <strong>Kostenlos</strong>. Fügen Sie Ihre Lieblings YouTube-Kanäle hinzu und sehen Sie sich die Videos ohne Ablenkungen oder unangemessene Inhalte an.
-            </p>
+            <p className="text-sm text-left text-gray-300 mt-10 mb-10 mr-10" data-aos="fade-right" data-aos-delay="200">
+              Fügen Sie Ihre Lieblings YouTube-Kanäle hinzu und sehen Sie sich die Videos ohne Ablenkungen oder unangemessene Inhalte an. <strong>Einfach</strong>, <strong>Ohne Werbung</strong> und <strong>Kostenlos</strong>. </p>
             <div
               className="max-w-2xl sm:max-w-none sm:flex sm:justify-start md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-12 md:mb-0"
               data-aos="fade-up"
@@ -56,7 +55,7 @@ export default function Hero() {
           </div>
           <div className="max-w-sm mx-auto md:max-w-none md:absolute md:left-[600px] md:top-0 -mb-12 md:-mt-12 md:mb-0">
             <div className="relative -ml-3 -mr-24 md:mx-0">
-              <Image src={HeroImage} className="rounded md:max-w-none shadow-2xl shadow-red-600" width="920" height="545" alt="Credit card" data-aos="fade-up" />
+              <Image src={HeroImage} className="rounded md:max-w-none shadow-2xl shadow-red-600" width="1220" height="545" alt="Credit card" data-aos="fade-up" />
             </div>
           </div>
         </div>

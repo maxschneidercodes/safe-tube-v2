@@ -35,7 +35,7 @@ cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express",
         ></script>
       </Head>
       <body
-        className={` font-inter antialiased tracking-tight`}
+        className={`bg-slate-900 font-sans`}
         style={{ overflowX: "hidden" }}
       >
         <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">

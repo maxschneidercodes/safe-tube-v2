@@ -39,7 +39,7 @@ export default function DashboardPage() {
   if (isLoading) {
     return <>
       <Header />
-      <div className="mt-10 pt-10 text-center ">
+      <div className="mt-10 pt-10 mb-10 pb-10 text-center ">
         <Spinner />
         <p className="text-red-500">Feed wird geladen...</p>
       </div>
@@ -61,8 +61,8 @@ export default function DashboardPage() {
         <Delete />
         <Add welcome={false} />
       </Header>
-      <div className="container bg-slate-800 " style={{ overflowX: "hidden" }}>
-        <div className="grid place-items-center" style={{ overflowX: "hidden" }}>
+      <div className="container bg-slate-600 " style={{ overflowX: "hidden" }}>
+        <div className="grid place-items-center " style={{ overflowX: "hidden" }}>
           {cookiesAccepted ? <>
             {!data || !data.xmlArray.length > 0 ?
               <div className="h-auto max-w-full rounded-lg mt-10 pt-10 pb-10 mb-10">
