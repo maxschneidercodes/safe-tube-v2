@@ -54,13 +54,13 @@ export default function Add(props) {
     }
 
     return <form onSubmit={handleAdd}>
-        <div class="text-sm flex rounded bg-gray-800" >
+        <div class="text-sm flex rounded" >
             {getSpinner && <Spinner />}
             <input
                 type="name"
                 {...register("channelInput")}
                 placeholder="YouTube-Channel"
-                className="rounded text-lg bg-gray-200 text-dark p-2"
+                className="rounded bg-gray-200 text-dark p-2"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 required

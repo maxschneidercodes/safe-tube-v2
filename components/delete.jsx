@@ -32,7 +32,7 @@ export default function Delete(props) {
         }
     }
 
-    return (<div className="rounded bg-gray-600">
+    return (<div className="rounded">
         <div className="flex flex-wrap">
             <select aria-label="Select"
                 onChange={(e) => {
@@ -41,7 +41,7 @@ export default function Delete(props) {
                     removeChannelClicked(selectedValue)
                     router.reload()
                 }}
-                className="text-white d-inline text-sm flex  rounded bg-gray-600 "
+                className="text-white d-inline text-sm flex  rounded bg-slate-700 "
             >
                 <option selected>YouTube-Channel Löschen</option>
                 {getHTML}

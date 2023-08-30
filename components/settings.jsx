@@ -19,7 +19,7 @@ export default function Settings() {
                 setCookie("videoDisplayAmmount", selectedValue);
                 router.reload()
             }}
-            className="text-white d-inline text-sm flex rounded bg-gray-600 "
+            className="text-white d-inline text-sm flex rounded bg-slate-700 "
         >
             <option value={getValue}>Zeige die Letzten {getValue} videos an</option>
             <option value="1">Letztes video </option>

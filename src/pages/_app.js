@@ -6,7 +6,6 @@ import "../../public/css/additional-styles/utility-patterns.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { Toaster } from "react-hot-toast";
 import NextNProgress from "nextjs-progressbar";
@@ -31,7 +30,7 @@ export default function App({ Component, pageProps }) {
         showOnShallow={true}
       />
       <Toaster toastOptions={{ position: "bottom-right" }} />
-      <main className="container mx-auto bg-gray-700 ">
+      <main className="container mx-auto bg-slate-700 ">
         <div>
           <Component {...pageProps} />
         </div>

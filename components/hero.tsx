@@ -3,12 +3,12 @@ import HeroImage from '@/public/images/img2.png'
 import Add from './add'
 
 export default function Hero() {
-  return <section className="relative pb-10 bg-gray-700">
+  return <section className="relative pb-10 bg-slate-900">
     <div
-      className="absolute inset-0 rounded-bl-[200px] md:mb-0 bg-gray-800 pointer-events-none z-0"
+      className="absolute inset-0 rounded-bl-[200px] md:mb-0 bg-slate-600 pointer-events-none z-0"
       aria-hidden="true"
     />
-    <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="pt-10 pb-20 md:pt-20 md:pb-20">
         <div className="relative max-w-xl mx-auto md:max-w-none text-center md:text-left">
           <div className="md:w-[600px]">
@@ -43,8 +43,8 @@ export default function Hero() {
                 Ablenkung
               </span> ansehen
             </h1>
-            <p className="text-sm text-left text-white mt-10 mb-10 mr-10" data-aos="fade-right" data-aos-delay="200">
-              <strong>Einfach</strong> und <strong>Kostenlos</strong>. Fügen Sie Ihre bevorzugten YouTube-Kanäle hinzu und sehen Sie sich die Videos ohne Ablenkungen oder unangemessene Inhalte an.
+            <p className="text-md text-left text-white mt-10 mb-10 mr-10" data-aos="fade-right" data-aos-delay="200">
+              <strong>Einfach</strong> und <strong>Kostenlos</strong>. Fügen Sie Ihre Lieblings YouTube-Kanäle hinzu und sehen Sie sich die Videos ohne Ablenkungen oder unangemessene Inhalte an.
             </p>
             <div
               className="max-w-2xl sm:max-w-none sm:flex sm:justify-start md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-12 md:mb-0"
@@ -56,7 +56,7 @@ export default function Hero() {
           </div>
           <div className="max-w-sm mx-auto md:max-w-none md:absolute md:left-[600px] md:top-0 -mb-12 md:-mt-12 md:mb-0">
             <div className="relative -ml-3 -mr-24 md:mx-0">
-              <Image src={HeroImage} className="rounded md:max-w-none shadow-2xl shadow-red-600" width="948" height="545" alt="Credit card" data-aos="fade-up" />
+              <Image src={HeroImage} className="rounded md:max-w-none shadow-2xl shadow-red-600" width="920" height="545" alt="Credit card" data-aos="fade-up" />
             </div>
           </div>
         </div>

@@ -20,18 +20,22 @@ export default function Document() {
           dangerouslySetInnerHTML={{
             __html: `
 document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"dark","language":"de","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Safetube.eu","website_privacy_policy_url":"https://www.safetube.eu/dataprotection/"});
-`,
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"de","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Safetube.eu","website_privacy_policy_url":"https://www.safetube.eu/datenschutzerklaerung/"});
+});`,
           }}
         ></script>
+
         <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4969831557424363"
-          crossorigin="anonymous"
+          type="text/plain"
+          data-cookie-consent="strictly-necessary"
+        ></script>
+        <script
+          type="text/plain"
+          data-cookie-consent="strictly-necessary"
         ></script>
       </Head>
       <body
-        className={` font-inter antialiased  bg-[#1e2a3b] text-gray-900 tracking-tight`}
+        className={` font-inter antialiased tracking-tight`}
         style={{ overflowX: "hidden" }}
       >
         <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">

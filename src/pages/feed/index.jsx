@@ -8,6 +8,7 @@ import Delete from "../../../components/delete";
 import getFetchURL from "../../../lib/fetchURL"
 import Header from "@/components/ui/header";
 import Spinner from "@/components/spinner";
+import Donate from "@/components/donate";
 
 export default function DashboardPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -45,29 +46,28 @@ export default function DashboardPage() {
       <Head>
         <title>Dein SafeTube Feed </title>
       </Head>
-      <Header extraCSS="shadow-2xl " title="Dein Feed" titleCSS="text-white" >
-        <li className="mr-4 mt-4">
-          <Settings />
-        </li>
-        <li className="mr-4 mt-4">
-          <Delete />
-        </li>
-        <li className="mt-4">
-          <Add welcome={false} />
-        </li>
+      <Header extraCSS="shadow-2xl" title="SafeTube.eu" titleCSS="text-white" >
+        <Settings />
+        <Delete />
+        <Add welcome={false} />
       </Header>
-      <div className="container p-4 px-8 bg-gray-800 ">
+      <div className="container p-4 px-8 bg-slate-800 ">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {!data || !data.xmlArray.length > 0 ?
-            <div className="h-auto max-w-full rounded-lg">
-              <p className="text-white text-sm text-center pt-5 text-muted ">
+            <div className="h-auto max-w-full rounded-lg mt-4 mb-4">
+              <p className="mb-4 text-2xl text-white text-center pt-5 text-muted ">
                 Noch keine YouTube-Channels Hinzugefügt 😐
               </p>
-            </div>
-            :
-            <div className="flex flex-wrap mt-8 mb-12 rounded justify-items-center items-center ">
-              {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
-            </div>
+              <div className="h-screen flex items-center justify-center">
+                <Add welcome={false} />
+              </div>
+            </div> :
+            <>
+              <div className="flex flex-wrap mt-8 mb-12 rounded justify-items-center items-center ">
+                {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
+                <Donate />
+              </div>
+            </>
           }
         </div>
       </div>
