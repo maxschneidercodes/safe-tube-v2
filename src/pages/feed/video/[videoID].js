@@ -21,13 +21,13 @@ export default function VideoDetail() {
         </li>
       </Header>
 
-      <div className="bg-slate-600">
+      <div className="bg-slate-100">
         <Head>
           <title> Viel Spaß beim Video! 😄 - SafeTube</title>
         </Head>
 
         <div
-          className="container"
+          className="container p-4"
           style={{ maxWidth: "1250px", margin: "0 auto" }}
         >
           <iframe

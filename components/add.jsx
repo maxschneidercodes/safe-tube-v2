@@ -60,7 +60,7 @@ export default function Add(props) {
                 type="name"
                 {...register("channelInput")}
                 placeholder="YouTube-Channel"
-                className="rounded bg-gray-200 text-dark p-2"
+                className="rounded bg-gray-300 text-dark p-2"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 required

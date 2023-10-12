@@ -30,7 +30,7 @@ export default function DashboardPage() {
   if (error) {
     return <>
       <Header />
-      <div className="mt-10 pt-10 text-center ">
+      <div className="mt-10 pt-10 text-center bg-white">
         <p className="text-red-500">Es ist ein fehler aufgetreten bitte versuchen sie es erneut.</p>
       </div>
     </>
@@ -39,7 +39,7 @@ export default function DashboardPage() {
   if (isLoading) {
     return <>
       <Header />
-      <div className="mt-10 pt-10 mb-10 pb-10 text-center ">
+      <div className="mt-10 pt-10 mb-10 pb-10 text-center bg-white">
         <Spinner />
         <p className="text-red-500">Feed wird geladen...</p>
       </div>
@@ -56,12 +56,12 @@ export default function DashboardPage() {
       <Head>
         <title>Dein SafeTube Feed </title>
       </Head>
-      <Header extraCSS="shadow-2xl" title="SafeTube.eu" titleCSS="text-white" >
+      <Header extraCSS="shadow-2xl" title="SafeTube.eu" titleCSS="text-dark" >
         <Settings />
         <Delete />
         <Add welcome={false} />
       </Header>
-      <div className="container bg-slate-600 " style={{ overflowX: "hidden" }}>
+      <div className="container bg-slate-100 " style={{ overflowX: "hidden" }}>
         <div className="grid place-items-center " style={{ overflowX: "hidden" }}>
           {cookiesAccepted ? <>
             {!data || !data.xmlArray.length > 0 ?
