@@ -10,7 +10,7 @@ export default function VideoDetail() {
 
   return (
     <>
-      <Header extraCSS="shadow-2xl" title="SafeTube.eu" titleCSS="text-white">
+      <Header extraCSS="shadow-2xl" title="SafeTube.eu">
         <li>
           <Link
             className="btn-sm text-sm inline-flex items-center text-white bg-red-500 hover:bg-red-600 group shadow-sm"

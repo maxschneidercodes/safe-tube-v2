@@ -29,8 +29,8 @@ export default function DashboardPage() {
 
   if (error) {
     return <>
-      <Header />
-      <div className="mt-10 pt-10 text-center bg-white">
+      <Header extraCSS="shadow-2xl" title="SafeTube.eu" />
+      <div className="pt-10 pb-10 p-4 text-center bg-white">
         <p className="text-red-500">Es ist ein fehler aufgetreten bitte versuchen sie es erneut.</p>
       </div>
     </>
@@ -38,8 +38,8 @@ export default function DashboardPage() {
 
   if (isLoading) {
     return <>
-      <Header />
-      <div className="mt-10 pt-10 mb-10 pb-10 text-center bg-white">
+      <Header extraCSS="shadow-2xl" title="SafeTube.eu" />
+      <div className="pt-10 pb-10 p-4  text-center bg-white">
         <Spinner />
         <p className="text-red-500">Feed wird geladen...</p>
       </div>
@@ -56,7 +56,7 @@ export default function DashboardPage() {
       <Head>
         <title>Dein SafeTube Feed </title>
       </Head>
-      <Header extraCSS="shadow-2xl" title="SafeTube.eu" titleCSS="text-dark" >
+      <Header extraCSS="shadow-2xl" title="SafeTube.eu"  >
         <Settings />
         <Delete />
         <Add welcome={false} />
@@ -65,7 +65,7 @@ export default function DashboardPage() {
         <div className="grid place-items-center " style={{ overflowX: "hidden" }}>
           {cookiesAccepted ? <>
             {!data || !data.xmlArray.length > 0 ?
-              <div className="h-auto max-w-full rounded-lg mt-10 pt-10 pb-10 mb-10">
+              <div className="h-auto max-w-full rounded-lg pt-10 pb-10 p-4 ">
                 <p className="mb-4 text-2xl text-white text-center pt-5 text-muted ">
                   Noch keine YouTube-Channels Hinzugefügt 😐
                 </p>
@@ -74,14 +74,17 @@ export default function DashboardPage() {
                 </div>
               </div> :
               <>
-                <div className="flex flex-wrap items-center justify-center mt-4 mb-12 rounded ">
-                  {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
-                  <Donate />
+                <div class="grid grid-cols-4 gap-4">
+                  <div className="flex flex-wrap items-center justify-center mt-4 mb-12 rounded ">
+                    {createVideosHTML(videoHTMLData, data.videoDisplayAmmount)}
+                    <Donate />
+                  </div>
                 </div>
+
               </>
             }
           </> : <>
-            <div className="h-auto max-w-full rounded-lg mt-10 pt-4 pb-10 mb-10 text-center">
+            <div className="h-auto max-w-full rounded-lg p-4  pt-4 pb-10  text-center">
               <h1 className="mb-4 text-xl text-white text-center pt-5 text-muted ">
                 Bitte akzeptieren Sie unsere Cookies, um SafeTube zu nutzen. 🍪
               </h1>
